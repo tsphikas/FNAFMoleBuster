@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  border: 3px solid #010124;
+  width: 800px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("images/background.png");
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.score {
+  font-size: 60px;
+  color: #ffffff;
+  position: absolute;
+  top: 10%;
+  left: 6%;
+  transform: translate(-50%, -50%);
+  /* border: 1px solid black; */
+  width: 200px;
+  height: 100px;
+  text-align: center;
+}
+
+.countdown {
+  position: absolute;
+  top: 490px;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
+button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: #010124;
+  color: white;
+  padding: 20px 50px;
+  border-radius: 5px;
+  z-index: 200;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.game {
+  width: 600px;
+  height: 400px;
+  margin: 70px auto;
+  z-index: 200;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hole {
+  flex: 1 0 33.33%;
+  position: relative;
+  overflow: hidden;
+  padding: 0 5px;
+}
+.hole:after {
+  content: "";
+  display: block;
+  background-color: black;
+  background-image: url("images/freddyBack.png");
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  bottom: -50px;
+  background-size: contain;
+}
+
+.mole {
+  background-image: url("images/freddy1.png");
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  z-index: 5;
+}
+
+.mole.small {
+  background-size: 80%;
+}
+
+.mole.large {
+  background-size: 100%;
+}
+
+.hole.up .mole {
+  top: 0;
+}
+
+.hidden {
+  display: none;
+}
