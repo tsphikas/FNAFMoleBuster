@@ -22,6 +22,20 @@ body {
   background-position: center;
 }
 
+.closeButton {
+  border: 1 solid yellow;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  z-index: 50;
+  top: 5%;
+  right: 0.5%;
+  display: none;
+  transform: translate(-50%, -50%);
+  background-image: url("images/close.png");
+  background-size: cover;
+}
+
 .score {
   font-size: 60px;
   color: #ffffff;
